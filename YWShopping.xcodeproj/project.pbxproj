@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F279CB5B1EAD967D007418BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279CB5A1EAD967D007418BD /* AppDelegate.swift */; };
 		F279CB5D1EAD967D007418BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279CB5C1EAD967D007418BD /* ViewController.swift */; };
-		F279CB601EAD967D007418BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F279CB5E1EAD967D007418BD /* Main.storyboard */; };
 		F279CB621EAD967D007418BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F279CB611EAD967D007418BD /* Assets.xcassets */; };
 		F279CB651EAD967D007418BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F279CB631EAD967D007418BD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		F279CB571EAD967D007418BD /* YWShopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YWShopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F279CB5A1EAD967D007418BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F279CB5C1EAD967D007418BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F279CB5F1EAD967D007418BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F279CB611EAD967D007418BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F279CB641EAD967D007418BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F279CB661EAD967D007418BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,12 +54,43 @@
 			children = (
 				F279CB5A1EAD967D007418BD /* AppDelegate.swift */,
 				F279CB5C1EAD967D007418BD /* ViewController.swift */,
-				F279CB5E1EAD967D007418BD /* Main.storyboard */,
-				F279CB611EAD967D007418BD /* Assets.xcassets */,
-				F279CB631EAD967D007418BD /* LaunchScreen.storyboard */,
-				F279CB661EAD967D007418BD /* Info.plist */,
+				F279CB6C1EAD97C0007418BD /* Resource */,
 			);
 			path = YWShopping;
+			sourceTree = "<group>";
+		};
+		F279CB6C1EAD97C0007418BD /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F279CB6D1EAD97CA007418BD /* Config */,
+				F279CB6E1EAD97D3007418BD /* Image */,
+				F279CB6F1EAD97DD007418BD /* Xib */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		F279CB6D1EAD97CA007418BD /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F279CB661EAD967D007418BD /* Info.plist */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		F279CB6E1EAD97D3007418BD /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				F279CB611EAD967D007418BD /* Assets.xcassets */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		F279CB6F1EAD97DD007418BD /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				F279CB631EAD967D007418BD /* LaunchScreen.storyboard */,
+			);
+			name = Xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +154,6 @@
 			files = (
 				F279CB651EAD967D007418BD /* LaunchScreen.storyboard in Resources */,
 				F279CB621EAD967D007418BD /* Assets.xcassets in Resources */,
-				F279CB601EAD967D007418BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,14 +172,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F279CB5E1EAD967D007418BD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F279CB5F1EAD967D007418BD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F279CB631EAD967D007418BD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -191,6 +211,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -209,6 +230,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -239,6 +261,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -250,6 +273,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -258,11 +282,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				INFOPLIST_FILE = YWShopping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ruofeng.YWShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -270,11 +295,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				INFOPLIST_FILE = YWShopping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ruofeng.YWShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
